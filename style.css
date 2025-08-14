@@ -10,11 +10,15 @@
   font-size: 16px;
 }
 
+@font-face { font-family: aeonik; font-weight: 200; src: url(./assets/AeonikTRIAL-Light.otf); } 
+@font-face { font-family: aeonik; font-weight: 500; src: url(./assets/AeonikTRIAL-Regular.otf); } 
+@font-face { font-family: aeonik; font-weight: 700; src: url(./assets/AeonikTRIAL-Bold.otf); }
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Arial", sans-serif;
+  font-family: aeonik;
   color: var(--sec);
 }
 
