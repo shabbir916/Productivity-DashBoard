@@ -1,0 +1,30 @@
+# Node modules folder
+node_modules/
+
+# Log files
+*.log
+
+# Temporary files
+*.tmp
+*.temp
+
+# System files (Mac & Windows)
+.DS_Store
+Thumbs.db
+
+# Build / dist folders
+dist/
+build/
+
+# VSCode & IDE settings
+.vscode/
+.idea/
+
+# Backup files
+*.bak
+*.old
+
+# Any large media files (optional)
+*.mp4
+*.zip
+*.rar

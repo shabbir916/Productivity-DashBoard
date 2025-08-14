@@ -1,0 +1,894 @@
+:root {
+  --pri: #f1dec9;
+  --sec: #c8b6a6;
+  --ter1: #a4907c;
+  --ter2: #8d7b68;
+  --green: rgb(8, 126, 40);
+  --blue: rgb(12, 97, 182);
+
+  /* Base font size for rem calculations */
+  font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+  color: var(--sec);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.main {
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--sec);
+  overflow-x: hidden;
+}
+
+nav {
+  height: 3.75rem;
+  width: 100%;
+  padding: 1.25rem 0.625rem;
+}
+
+.nav-in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--ter2);
+  padding: 1.25rem 1.875rem;
+  border-radius: 0.625rem;
+}
+
+.nav-in .productivity {
+  font-size: clamp(1.25rem, 2.5vw, 1.563rem);
+  font-weight: 700;
+  color: var(--pri);
+  letter-spacing: 0.0625rem;
+}
+
+.nav-in button {
+  font-size: clamp(0.875rem, 2vw, 1.125rem);
+  padding: 0.5rem 0.625rem;
+  font-weight: 700;
+  color: var(--ter2);
+  background-color: var(--pri);
+  border: none;
+  border-radius: 0.313rem;
+  transition: all ease 0.2s;
+  cursor: pointer;
+  letter-spacing: 0.0625rem;
+}
+
+.nav-in button:active {
+  scale: 0.97;
+}
+
+header {
+  min-height: 18.75rem;
+  height: clamp(15rem, 30vh, 25rem);
+  background-color: var(--ter1);
+  margin: 0.625rem;
+  margin-top: 3rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  background-image: url("https://images.unsplash.com/photo-1419833173245-f59e1b93f9ee?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8c2t5fGVufDB8MHwwfHx8MA%3D%3D");
+  background-size: cover;
+  object-fit: cover;
+  background-position: center;
+}
+
+header .header-1 h1 {
+  font-size: clamp(2rem, 6vw, 3.75rem);
+  color: var(--pri);
+  line-height: 1.1;
+}
+
+header .header-1 h2 {
+  font-size: clamp(1.25rem, 3vw, 1.875rem);
+  color: var(--pri);
+}
+
+header .header-1 h3 {
+  font-size: clamp(1rem, 2.5vw, 1.875rem);
+  margin-top: 1.563rem;
+  color: var(--pri);
+}
+
+header .header-2 h1 {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+  color: var(--pri);
+}
+
+header .header-2 h2 {
+  font-size: clamp(1.125rem, 2.5vw, 1.875rem);
+  color: var(--pri);
+  text-transform: capitalize;
+  letter-spacing: 0.125rem;
+}
+
+header .header-2 h4 {
+  font-size: clamp(0.875rem, 2vw, 1.25rem);
+  color: var(--pri);
+  margin-top: 0.313rem;
+}
+
+section.allElems {
+  width: 100%;
+  margin-top: 1.25rem;
+}
+
+.allElems .allFeatures {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  overflow-x: auto;
+  padding: 0 0.625rem;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--ter2) var(--sec);
+}
+
+.allElems .allFeatures::-webkit-scrollbar {
+  height: 0.5rem;
+}
+
+.allElems .allFeatures::-webkit-scrollbar-track {
+  background: var(--sec);
+}
+
+.allElems .allFeatures::-webkit-scrollbar-thumb {
+  background: var(--ter2);
+  border-radius: 0.25rem;
+}
+
+.elem {
+  border-radius: 0.625rem;
+  height: clamp(18rem, 25vw, 20.625rem);
+  min-width: clamp(20rem, 20vw, 15.625rem);
+  width: clamp(12rem, 20vw, 15.625rem);
+  overflow: hidden;
+  position: relative;
+  transition: all ease 0.2s;
+  flex-shrink: 0;
+}
+
+.elem:active {
+  scale: 0.97;
+}
+
+.elem:hover {
+  cursor: pointer;
+  transform: translateY(-0.25rem);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.elem img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.elem:hover img {
+  transform: scale(1.05);
+}
+
+.elem h2 {
+  position: absolute;
+  bottom: 2%;
+  right: 5%;
+  font-size: clamp(1rem, 2vw, 1.563rem);
+  font-weight: 700;
+  color: white;
+  text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  backdrop-filter: blur(0.25rem);
+}
+
+.fullElems {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--sec);
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+  display: none;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  overflow-y: auto;
+}
+
+.fullElems h2 {
+  font-size: clamp(1.875rem, 5vw, 3.125rem);
+  color: var(--ter2);
+  margin-bottom: 1rem;
+}
+
+.back {
+  position: absolute;
+  right: 3%;
+  top: 2%;
+  padding: 0.625rem 0.75rem;
+  font-size: clamp(1rem, 2.5vw, 1.563rem);
+  border: none;
+  border-radius: 0.625rem;
+  background-color: red;
+  color: var(--pri);
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.back:active {
+  scale: 0.97;
+}
+
+.todo-container {
+  height: 85%;
+  margin-top: 2.5rem;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.todo-container .add-task {
+  height: 100%;
+  width: 33%;
+  min-width: 18.75rem;
+  background-color: var(--ter2);
+  border-radius: 0.625rem;
+  padding: 1.875rem 1.25rem;
+}
+
+.todo-container .add-task form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2rem;
+  height: 100%;
+}
+
+.todo-container .add-task form input#task-input {
+  width: 100%;
+  padding: 1.25rem 1.438rem;
+  background-color: var(--pri);
+  border: none;
+  border-radius: 0.313rem;
+  outline: none;
+  font-size: clamp(1rem, 2.5vw, 1.563rem);
+  color: var(--ter2);
+}
+
+.todo-container .add-task form textarea {
+  width: 100%;
+  min-height: 6.25rem;
+  padding: 1.25rem 1.438rem;
+  background-color: var(--pri);
+  border: none;
+  border-radius: 0.313rem;
+  outline: none;
+  font-size: clamp(1rem, 2.5vw, 1.563rem);
+  color: var(--ter2);
+  resize: vertical;
+}
+
+.todo-container .add-task form button {
+  width: 100%;
+  padding: 1.25rem 1.438rem;
+  background-color: var(--pri);
+  border: none;
+  border-radius: 0.313rem;
+  outline: none;
+  font-size: clamp(1.125rem, 2.5vw, 1.75rem);
+  color: var(--ter2);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.add-task form button:active {
+  scale: 0.97;
+}
+
+.todo-container .all-task {
+  height: 100%;
+  width: 65%;
+  background-color: var(--ter2);
+  border-radius: 0.625rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1.875rem;
+  overflow-y: auto;
+  gap: 1.25rem;
+  /* Updated responsive font size for all-task container */
+  font-size: clamp(0.875rem, 1.8vw, 1.125rem);
+}
+
+.todo-container .all-task .task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--pri);
+  padding: clamp(0.625rem, 1.5vw, 0.75rem);
+  border: none;
+  border-radius: 0.313rem;
+  transition: all 0.2s ease;
+}
+
+.task h2 {
+  color: var(--ter2);
+  font-size: clamp(0.875rem, 1.8vw, 1.125rem);
+  display: flex;
+  align-items: center;
+  gap: 0.313rem;
+  flex: 1;
+  margin-right: 1rem;
+  line-height: 1.3;
+}
+
+.task h2 span {
+  background-color: red;
+  color: var(--pri);
+  font-size: clamp(0.563rem, 1.2vw, 0.688rem);
+  padding: 0.25rem 0.5rem;
+  border-radius: 3.125rem;
+  font-weight: 500;
+}
+
+.task h2 span.true {
+  opacity: 1;
+}
+
+.all-task h2 span.false {
+  opacity: 0;
+}
+
+.todo-container .all-task button {
+  color: var(--pri);
+  font-size: clamp(0.75rem, 1.5vw, 1rem);
+  padding: clamp(0.5rem, 1.2vw, 0.625rem) clamp(0.625rem, 1.5vw, 0.75rem);
+  background-color: var(--ter2);
+  border: none;
+  border-radius: 0.313rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+  min-width: fit-content;
+}
+
+.todo-container .all-task button:hover {
+  background-color: var(--green);
+}
+
+.todo-container .all-task button:active {
+  scale: 0.97;
+}
+
+.mark-imp {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 1.25rem;
+  padding: 0 0.625rem;
+}
+
+.mark-imp input {
+  transform: scale(1.5);
+}
+
+.mark-imp label {
+  font-size: clamp(1rem, 2.5vw, 1.375rem);
+}
+
+/* Daily planner full page */
+.daily-planner-fullPage .dialy-planner-container {
+  height: 85%;
+  background-color: var(--ter2);
+  margin-top: 1.875rem;
+  padding: 1.875rem;
+  /* position: relative; */
+  overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr));
+  gap: 1rem;
+  border-radius: 0.625rem;
+}
+
+.daily-planner-fullPage .dialy-planner-container .daily-planner-time {
+  background-color: var(--pri);
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 0.313rem;
+  overflow: hidden;
+  min-height: 4rem;
+}
+
+.dialy-planner-container .daily-planner-time p {
+  font-size: 1rem;
+  color: var(--ter1);
+  font-weight: 500;
+  position: absolute;
+  top: 10%;
+  left: 1%;
+  z-index: 1;
+}
+
+.dialy-planner-container .daily-planner-time input {
+  width: 100%;
+  background-color: var(--pri);
+  border: none;
+  outline: none;
+  font-size: clamp(1.125rem, 2.5vw, 1.75rem);
+  padding: 1.25rem 1.563rem;
+  padding-top: 1.875rem;
+  color: var(--ter2);
+}
+
+.motivation-fullPage {
+  width: 100%;
+  height: 100%;
+  /* position: relative; */
+  background-color: var(--ter2);
+}
+
+.motivation-fullPage .motivation-container {
+  height: 400px;
+  width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 40px;
+}
+
+.motivation-fullPage .motivation-container::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: var(--pri);
+  position: absolute;
+  border-radius: 40px;
+  scale: 1.15;
+  -webkit-filter: blur(30px);
+  filter: blur(30px);
+  z-index: 8;
+}
+
+.motivation-fullPage .motivation-container .motivation-wrapper {
+  z-index: 10;
+  background-color: var(--ter1);
+  width: 100%;
+  position: absolute;
+  border-radius: 30px;
+  border: 6px solid var(--pri);
+  padding: 20px;
+}
+
+.motivation-wrapper .motivation-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+}
+
+.motivation-1 h2 {
+  font-size: 25px;
+  background-color: var(--sec);
+  color: var(--ter2);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.motivation-wrapper .motivation-2 {
+  padding: 20px;
+  margin-top: 20px;
+  color: var(--pri);
+}
+
+.motivation-wrapper .motivation-2 p {
+  font-size: 35px;
+  font-weight: 500;
+}
+
+.motivation-3 {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+}
+
+.motivation-3 h2 {
+  font-size: 25px;
+  text-align: right;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: var(--sec);
+  padding: 20px;
+  border-radius: 20px;
+}
+
+/* Pomodoro full page */
+.pomo-timer-fullPage .pomo-timer {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 1.875rem;
+  border-radius: 0.625rem;
+  width: 90%;
+  max-width: 25rem;
+}
+
+.pomo-timer h1 {
+  color: var(--ter2);
+  font-size: clamp(3rem, 8vw, 6.25rem);
+  margin-bottom: 2rem;
+  font-weight: 300;
+}
+
+.pomo-timer button {
+  background-color: var(--pri);
+  color: var(--ter2);
+  padding: clamp(0.5rem, 2vw, 0.625rem) clamp(0.75rem, 2.5vw, 0.938rem);
+  border: none;
+  border-radius: 0.313rem;
+  margin: 0.625rem;
+  font-size: clamp(0.875rem, 2.5vw, 1.25rem);
+  font-weight: 700;
+  box-shadow: 0.125rem 0.125rem 0 var(--ter2);
+  transition: all ease 0.2s;
+  cursor: pointer;
+}
+
+.pomo-timer button:hover {
+  background-color: var(--ter1);
+}
+
+.pomo-timer button:active {
+  box-shadow: 0 0 0 var(--ter2);
+  transform: translate(0.125rem, 0.125rem);
+}
+
+.pomo-timer-fullPage .session {
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--green);
+  padding: clamp(0.75rem, 2vw, 0.938rem) clamp(1rem, 3vw, 1.563rem);
+  font-size: clamp(1rem, 2.5vw, 1.563rem);
+  border-radius: 0.625rem;
+  font-weight: 700;
+  color: white;
+  white-space: nowrap;
+}
+
+/* Enhanced Responsive Design */
+@media (max-width: 1200px) {
+  .allElems .allFeatures {
+    justify-content: flex-start;
+  }
+
+  .todo-container {
+    flex-direction: column;
+    gap: 1.5rem;
+    height: auto;
+  }
+
+  .fullElems h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 60px;
+  }
+
+  .todo-container .add-task,
+  .todo-container .all-task {
+    width: 100%;
+    min-width: unset;
+  }
+
+  /* Adjust font sizes for medium screens */
+  .todo-container .all-task {
+    font-size: clamp(0.875rem, 2vw, 1.125rem);
+  }
+
+  .task h2 {
+    font-size: clamp(0.875rem, 2vw, 1.125rem);
+    align-items: flex-start;
+  }
+
+  .todo-container .all-task button {
+    font-size: clamp(0.75rem, 1.8vw, 1rem);
+  }
+
+  /* Keep motivation container centered on medium screens */
+  .motivation-fullPage .motivation-container {
+    width: clamp(18.75rem, 90vw, 50rem);
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav-in {
+    padding: 1rem 1.25rem;
+  }
+
+  .nav-in .productivity {
+    font-size: 1.25rem;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+    height: auto;
+    min-height: 20rem;
+    margin-top: 2.5rem;
+  }
+
+  .allElems .allFeatures {
+    flex-direction: row;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+  }
+
+  .elem {
+    min-width: 12rem;
+  }
+
+  .fullElems {
+    padding: 1.25rem;
+  }
+
+  .fullElems h2 {
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 60px;
+  }
+
+  .back {
+    top: 1rem;
+    right: 1rem;
+    font-size: 1rem;
+    padding: 0.5rem 0.75rem;
+  }
+
+  .todo-container .add-task form {
+    gap: 1.5rem;
+  }
+
+  /* Tablet-specific font size adjustments */
+  .todo-container .all-task {
+    font-size: 1rem;
+  }
+
+  .todo-container .all-task .task {
+    padding: clamp(0.625rem, 1.5vw);
+  }
+
+  .task h2 {
+    font-size: 1rem;
+  }
+
+  .task h2 span {
+    font-size: 0.625rem;
+  }
+
+  .todo-container .all-task button {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.625rem;
+  }
+
+  .daily-planner-fullPage .dialy-planner-container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .pomo-timer {
+    width: 95% !important;
+  }
+
+  .pomo-timer button {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  /* Keep motivation container centered and properly sized on tablet */
+  .motivation-fullPage .motivation-container {
+    width: clamp(18.75rem, 95vw, 40rem);
+    margin: 1rem auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-in {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .nav-in .productivity {
+    font-size: 1.125rem;
+  }
+
+  header {
+    margin: 0.5rem;
+    padding: 1.5rem;
+    margin-top: 5rem;
+  }
+
+  .elem {
+    min-width: 10rem;
+    height: 15rem;
+  }
+
+  .elem h2 {
+    font-size: 0.875rem;
+    bottom: 5%;
+    right: 5%;
+    left: 5%;
+    text-align: center;
+  }
+
+  .fullElems {
+    padding: 1rem;
+  }
+
+  .fullElems h2 {
+    font-size: clamp(1.875rem, 5vw, 3.125rem);
+    color: var(--ter2);
+    margin-bottom: 1rem;
+    padding: 0 60px;
+  }
+
+  /* Mobile-specific font size adjustments */
+  .todo-container .all-task {
+    font-size: 0.875rem;
+    padding: 1rem;
+    gap: 1rem;
+  }
+
+  .task h2 {
+    font-size: 0.875rem;
+    line-height: 1.4;
+  }
+
+  .task h2 span {
+    font-size: 0.5rem;
+    padding: 0.125rem 0.375rem;
+  }
+
+  .todo-container .all-task button {
+    font-size: 0.75rem;
+    padding: 0.375rem 0.5rem;
+  }
+
+  .todo-container .all-task .task {
+    padding: 0.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .task h2 {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .todo-container .all-task button {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Keep motivation container centered and properly sized on mobile */
+  .motivation-fullPage .motivation-container {
+    width: clamp(16rem, 95vw, 30rem);
+    margin: 0.5rem auto;
+  }
+
+  .motivation-wrapper .motivation-2 p {
+    font-size: 1.125rem;
+  }
+
+  .pomo-timer-fullPage .session {
+    top: 10%;
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Focus and accessibility improvements */
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 0.125rem solid var(--blue);
+  outline-offset: 0.125rem;
+}
+
+/* Smooth scrolling */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Loading animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(1.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.elem {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Custom scrollbar for webkit browsers */
+.todo-container .all-task::-webkit-scrollbar,
+.daily-planner-fullPage .dialy-planner-container::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+.todo-container .all-task::-webkit-scrollbar-track,
+.daily-planner-fullPage .dialy-planner-container::-webkit-scrollbar-track {
+  background: var(--ter1);
+}
+
+.todo-container .all-task::-webkit-scrollbar-thumb,
+.daily-planner-fullPage .dialy-planner-container::-webkit-scrollbar-thumb {
+  background: var(--pri);
+  border-radius: 0.25rem;
+}
+
+/* Print styles */
+@media print {
+  .fullElems,
+  .back,
+  nav button {
+    display: none !important;
+  }
+
+  header {
+    background-image: none !important;
+    background-color: var(--ter1) !important;
+  }
+
+  * {
+    color: black !important;
+    background: white !important;
+  }
+}
